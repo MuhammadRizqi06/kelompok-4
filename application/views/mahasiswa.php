@@ -26,7 +26,7 @@
                 <td><?php echo $row->nama; ?></td>
                 <td><?php echo $row->jurusan; ?></td>
                 <td><?php echo $row->alamat; ?></td>
-                <td><a href="<?= base_url('mahasiswa/delete/'.$row->nim); ?>">hapus</a></td>
+                <td><a href="<?= base_url('mahasiswa/delete/' . $row->nim); ?>">hapus</a></td>
             </tr>
         <?php endforeach; ?>
 

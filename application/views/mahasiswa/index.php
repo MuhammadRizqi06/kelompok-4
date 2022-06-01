@@ -22,8 +22,12 @@
             <td><?php echo $row->nama; ?></td>
             <td><?php echo $row->jurusan; ?></td>
             <td><?php echo $row->alamat; ?></td>
-            <td><a href="<?php echo site_url('mahasiswa/edit/' . $row->nim); ?>"><i class="glyphicon glyphicon-edit"></i></a></td>
-            <td><a href="#" class="hapus" kode="<?php echo $row->nim; ?>"><i class="glyphicon glyphicon-trash"></i></a></td>
+            <td>
+                <a href="<?php echo site_url('mahasiswa/edit/' . $row->nim); ?>"><i class="glyphicon glyphicon-edit"></i></a>
+            </td>
+            <td>
+                <a href="#" class="hapus" kode="<?php echo $row->nim; ?>"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
         </tr>
     <?php endforeach; ?>
 </Table>
@@ -35,7 +39,7 @@
             $("#idhapus").val(kode);
             $("#myModal").modal("show");
         });
-        
+
         $("#konfirmasi").click(function() {
             var kode = $("#idhapus").val();
             $.ajax({
