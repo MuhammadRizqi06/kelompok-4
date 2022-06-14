@@ -10,10 +10,10 @@ class Transaksi extends CI_Controller
         $data['plg'] = $this->m_transaksi->getNik()->result();
         $data['vaksin'] = $this->m_transaksi->getVaksin()->result();
 
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
         $this->load->view('v_transaksi', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
 
